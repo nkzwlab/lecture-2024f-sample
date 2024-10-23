@@ -1,13 +1,13 @@
 # socket編のサンプルコード
 
 # 概要
-pythonの組み込みモジュールであるsocketモジュールを使用して, TCP/UDP通信を行うクライアントアプリケーションを作成します.
+pythonの組み込みモジュールであるsocketモジュールを使用して, TCP/UDP通信を行うクライアント/サーバアプリケーションを作成します.
 
 参考文献: [PythonによるTCP/IPソケットプログラミング](https://www.amazon.co.jp/dp/4274223248)
 
 ## ディレクトリ構成
-┬ client_side : ソケット接続するクライアントのpythonプログラム. ローカルPC上で実行する  
-└ server_side : ソケット接続するクライアントのpythonプログラム. ccx01などのサーバ上で実行する  
+┬ [client_side](client_side) : ソケット接続するクライアントのpythonプログラム. ローカルPC上で実行する  
+└ [server_side](server_side) : ソケット接続するクライアントのpythonプログラム. ccx01などのサーバ上で実行する  
 
 
 ## 0.やってみる

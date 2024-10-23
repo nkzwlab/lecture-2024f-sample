@@ -26,6 +26,6 @@ while True: #  q キーが押下されるまで、繰り返す
     message = input() # キーボード入力を受け付ける
     if message == "q": # q キーのみが入力された場合は終了
         break
-    client.sendall(msg.encode("utf-8")) # サーバにテキストを送信
+    client.sendall(message.encode("utf-8")) # サーバにテキストを送信
 
 client.close() # ソケット接続を終了

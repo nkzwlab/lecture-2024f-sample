@@ -24,7 +24,7 @@ except: # 接続できない場合の例外処理
     print("接続できません")
     sys.exit() # 例外時は終了する
 
-msg = file_input.read() # ファイルオブジェクトからファイルの内容を取得
-client.sendall(msg.encode("utf-8")) # サーバにテキストを送信
+message = file_input.read() # ファイルオブジェクトからファイルの内容を取得
+client.sendall(message.encode("utf-8")) # サーバにテキストを送信
 
 client.close() # ソケット接続を終了
