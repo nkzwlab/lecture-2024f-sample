@@ -2,7 +2,7 @@
 
 import socket # ソケットモジュールを取得
 
-PORT = 50001 # ポートを指定する
+PORT = 40001 # ポートを指定する
 BUFSIZE = 4096 # バッファサイズを指定する
 
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # IPv4, UDPでソケット接続インスタンスを生成

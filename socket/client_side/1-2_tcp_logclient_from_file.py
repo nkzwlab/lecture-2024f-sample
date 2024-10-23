@@ -11,7 +11,7 @@ HOST,PORTを適切な値を設定して実行してください. PORTは講義�
 """
 
 HOST = "ccx01.sfc.keio.ac.jp" # 接続先のホスト名(FQDNまたはIPv4)を指定する
-PORT = 50000 # ポートを指定する(サーバ側で実行しているコードと合致させる)
+PORT = 40000 # ポートを指定する(サーバ側で実行しているコードと合致させる)
 
 DATAFILE = "1-2_data.txt" # 送信するファイル名を指定する
 file_input = open(DATAFILE, "rt", encoding="utf-8") # ファイルを開いてファイルオブジェクトを取得

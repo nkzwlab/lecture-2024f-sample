@@ -10,7 +10,7 @@ PORTを適切な値(講義内で自分が利用すると決めたもの)を設�
 $ python 0_tcp_client.py 
 """
 
-PORT = 50000 # ポートを指定する
+PORT = 40000 # ポートを指定する
 BUFSIZE = 4096 # バッファサイズを指定する
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPv4, TCPでソケット接続インスタンスを生成

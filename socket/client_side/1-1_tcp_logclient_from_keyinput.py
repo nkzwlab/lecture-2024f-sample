@@ -12,7 +12,7 @@ q キーのみが入力されるまで、繰り返しデータを送信します
 """
 
 HOST = "ccx01.sfc.keio.ac.jp" # 接続先のホスト名(FQDNまたはIPv4)を指定する
-PORT = 50000 # ポートを指定する(サーバ側で実行しているコードと合致させる)
+PORT = 40000 # ポートを指定する(サーバ側で実行しているコードと合致させる)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPv4, TCPでソケット接続インスタンスを生成
 
