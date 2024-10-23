@@ -1,0 +1,3 @@
+this is test.
+client transfer this text file.
+日本語文字列も転送できます。
