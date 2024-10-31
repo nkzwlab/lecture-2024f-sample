@@ -13,11 +13,11 @@ $ python 0_tcp_client.py
 
 PORT = 40000 # ポートを指定する
 BUFSIZE = 4096 # バッファサイズを指定する
-LOG_DIR = "./log"
+LOG_DIR = "./log" # ログ出力ディレクトリを定義
 
-if not os.path.exists(LOG_DIR):
+if not os.path.exists(LOG_DIR): # logディレクトリの存在チェック
     print(f"make directory: {LOG_DIR}")
-    os.mkdir(LOG_DIR)
+    os.mkdir(LOG_DIR) # logディレクトリを作成する
 
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPv4, TCPでソケット接続インスタンスを生成
