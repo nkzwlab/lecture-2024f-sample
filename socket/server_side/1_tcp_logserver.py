@@ -2,6 +2,7 @@
 
 import socket # ソケットモジュールを取得
 import datetime # 日時モジュールを取得
+import os # ディレクトリ存在確認およびディレクトリ作成のためのモジュールを取得
 
 """
 IPv4,TCPの接続を受け付け, クライアントの接続要求に対して受信データをファイル保存するコードです.
@@ -12,6 +13,12 @@ $ python 0_tcp_client.py
 
 PORT = 40000 # ポートを指定する
 BUFSIZE = 4096 # バッファサイズを指定する
+LOG_DIR = "./log"
+
+if not os.path.exists(LOG_DIR):
+    print(f"make directory: {LOG_DIR}")
+    os.mkdir(LOG_DIR)
+
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPv4, TCPでソケット接続インスタンスを生成
 
@@ -26,7 +33,7 @@ try: # 例外を監視
         file_name = datetime_now.strftime("%m%d%H%M%S%f") + ".txt" # YYYYMMDDHHMISS 形式の文字列に変換
         print(file_name, "接続要求あり") # サーバに保存するファイル名と接続要求を画面表示
         print(client) # 接続元クライアントを表示
-        file_out = open("./log/" + file_name, "wt") # 保存するファイルオブジェクトを生成
+        file_out = open(LOG_DIR + "/" + file_name, "wt") # 保存するファイルオブジェクトを生成
         try: # ファイル保存処理の例外発生を監視
             while True: # コネクションが継続している限りループする
                 data = client.recv(BUFSIZE) # クライアントからの送信情報を取得
