@@ -21,9 +21,13 @@ server.bind(("", PORT))  # サーバプログラムで使用するポートを�
 
 server.listen()  # 接続待ち状態にする
 
+print("Started single-threaded server")
+
 
 def handle_connection(client, address):
-    print(str(datetime.datetime.now()), "接続要求あり")  # 接続要求を画面表示
+    now = datetime.datetime.now()
+    print(f"[{now}] 接続要求あり: {address}")  # 接続要求を画面表示
+
     time.sleep(5)
     client.sendall(
         b"hello! this is single-threaded kino-ma server program!!\n"
