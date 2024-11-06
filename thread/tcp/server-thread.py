@@ -7,9 +7,9 @@ import time
 
 """
 IPv4,TCPで接続をうけつけ,クライアントからの接続要求に対して,定型的な文字列を送信するサーバプログラムです.
-PORTを適切な値(講義内で自分が利用すると決めたもの)を設定して実行してください.
+リクエストが来ると,新しいスレッドで処理を継続します.
 実行方法:
-$ python 0_tcp_server.py 
+$ python3 server-thread.py
 """
 
 PORT = 9999  # ポートを指定
@@ -23,6 +23,7 @@ server.bind(("", PORT))  # サーバプログラムで使用するポートを�
 server.listen()  # 接続待ち状態にする
 
 
+# クライアントの要求を処理する関数
 def handle_connection(client, address):
     print(str(datetime.datetime.now()), "接続要求あり")  # 接続要求を画面表示
     time.sleep(5)
@@ -36,8 +37,10 @@ def handle_connection(client, address):
 try:
     while True:  # プログラムを実行中は常に以下を実行し続ける
         client, address = server.accept()  # 受信要求用を受け入れてコネクションを確立
-        thread = threading.Thread(target=handle_connection, args=(client, address))
-        thread.start()
+        thread = threading.Thread(
+            target=handle_connection, args=(client, address)
+        )  # 新しいスレッドの作成
+        thread.start()  # 作成したスレッドで handle_connection 関数を起動
 except KeyboardInterrupt:  # Ctrl + C を押した場合の処理
     print("ソケットを解放します")
     server.close()  # ソケット接続を終了
