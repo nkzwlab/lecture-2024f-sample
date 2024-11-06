@@ -11,7 +11,7 @@ PORTを適切な値(講義内で自分が利用すると決めたもの)を設�
 $ python 0_tcp_server.py 
 """
 
-PORT = 9999  # ポートを指定
+PORT = 9998  # ポートを指定
 
 server = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM
