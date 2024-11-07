@@ -11,3 +11,28 @@ pythonの組み込みモジュールである、socketモジュールを用い�
 
 `threading` モジュールを使った並列プログラミングのサンプルコードです。
 詳細は[こちら](./thread/README.md)
+
+
+## その他
+
+### シェルも作るもの
+
+[`/misc/shell`](./misc/shell/shell.py) で、とてもシンプルなシェルのプログラムを実装しています。
+
+```
+python3 shell.py
+```
+
+出力・操作
+
+```
+$ echo hello
+hello
+```
+
+C 言語で実装したものもあります。
+
+```
+gcc shell.py -o shell
+./shell
+```
