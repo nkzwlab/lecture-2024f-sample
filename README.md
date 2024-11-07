@@ -29,10 +29,3 @@ python3 shell.py
 $ echo hello
 hello
 ```
-
-C 言語で実装したものもあります。
-
-```
-gcc shell.py -o shell
-./shell
-```
