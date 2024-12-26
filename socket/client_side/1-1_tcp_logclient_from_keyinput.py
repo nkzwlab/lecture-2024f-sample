@@ -11,8 +11,8 @@ q キーのみが入力されるまで、繰り返しデータを送信します
  $ python 1-1_tcp_logclient_from_keyinput.py 
 """
 
-HOST = "ccx01.sfc.keio.ac.jp" # 接続先のホスト名(FQDNまたはIPv4)を指定する
-PORT = 40000 # ポートを指定する(サーバ側で実行しているコードと合致させる)
+HOST = "bastion.jn.sfc.keio.ac.jp" # 接続先のホスト名(FQDNまたはIPv4)を指定する
+PORT = 9999 # ポートを指定する(サーバ側で実行しているコードと合致させる)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPv4, TCPでソケット接続インスタンスを生成
 
