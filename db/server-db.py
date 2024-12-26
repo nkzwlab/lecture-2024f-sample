@@ -38,7 +38,7 @@ def handle_connection(client, address):
 
     try:
         # クライアントからのメッセージを受信
-        message = client.recv(1024).decode("utf-8")
+        message = client.recv(4096).decode("utf-8")
         print(f"Received message: {message}")
 
         # 受信したメッセージをDBに書き込み
@@ -76,3 +76,6 @@ finally:  # その他の例外発生時の処理
     server.close()  # ソケット接続を終了
     db_cursor.close()  # カーソルを閉じる
     db_connection.close()  # DB接続を終了
+
+
+
