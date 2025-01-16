@@ -1,0 +1,28 @@
+Source: kino-ma
+Destination: mirai
+Content-Lines: 2
+
+お疲れ様！
+昨日のインシデント対応よろしく！ ^_^
+
+Source: mirai
+Destination: kino-ma
+Content-Lines: 1
+
+嫌です．
+
+Source: mirai
+Destination: yanma
+Content-Lines: 5
+
+kino-ma さんからのメッセージを転送します．
+yanma くん，代わりにやってください．
+
+> お疲れ様！
+> 昨日のインシデント対応よろしく！ ^_^
+
+Source: yanma
+Destination: mirai
+Content-Lines: 1
+
+承知しました……。
